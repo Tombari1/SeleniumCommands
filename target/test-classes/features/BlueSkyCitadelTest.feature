@@ -1,7 +1,8 @@
 Feature: BlueSky Form Test
   Scenario: Menu Test
     Given I navigate to blueskycitadelform site
-    And I click on the Home link
+    #And I close the pop up menu
+    #And I click on the Home link
     And I click on the About link
     And I click on some menu links
     When I click on Automation Testing Form
@@ -10,6 +11,7 @@ Feature: BlueSky Form Test
 
   Scenario: Form Fields Test
     Given I navigate to blueskycitadelform site
+    #And I close the pop up menu
     When I click on Automation Testing Form
     And I enter the Single Line Text
     And I enter email address

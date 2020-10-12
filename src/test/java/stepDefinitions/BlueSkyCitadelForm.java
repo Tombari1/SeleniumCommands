@@ -51,7 +51,7 @@ public class BlueSkyCitadelForm {
 
     @And("^I click on some menu links$")
     public void iClickOnSomeMenuLinks() {
-        driver.findElement(By.linkText("Events")).click();
+        //driver.findElement(By.linkText("Events")).click();
         driver.findElement(By.linkText("Contact")).click();
 
     }
@@ -59,7 +59,7 @@ public class BlueSkyCitadelForm {
     @Then("^I close my window$")
     public void iCloseMyWindow() {
         driver.close();
-        driver.quit();
+       // driver.quit();
     }
 
     @And("^I enter email address$")
@@ -159,4 +159,10 @@ public class BlueSkyCitadelForm {
        boolean isMessageDisplayed =  driver.findElement(By.cssSelector("#nf-form-errors-9 > nf-errors > nf-section > div")).isDisplayed();
         System.out.println(isMessageDisplayed);
     }
+
+    @And("^I close the pop up menu$")
+    public void iCloseThePopUpMenu() {
+        driver.findElement(By.cssSelector(".pum-close")).click();
+    }
+
 }
